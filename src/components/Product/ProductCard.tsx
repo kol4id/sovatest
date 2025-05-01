@@ -1,0 +1,30 @@
+import { FC, useState } from "react";
+import { Product } from "../../store/productsSlice";
+import ProductPlaceholder from "../../assets/ProductPlaceholder.jpg";
+import styles from "./ProductCard.module.scss";
+
+interface ProductCardProps {
+    product: Product;
+}
+
+const ProductCard: FC<ProductCardProps> = ({product}) => {
+    const [imgSrc, setImgSrc] = useState(product.image ?? ProductPlaceholder);
+
+    return(
+        <>
+            <article className={styles.card_article}>
+                <img 
+                    src={imgSrc}
+                    loading="lazy"
+                    onError={() => setImgSrc(ProductPlaceholder)}
+                    alt={product.name}
+                    title={product.name}
+                />
+                <h2>{product.name}</h2>
+                <p>{`цена: ${product.price} ₽`}</p>
+            </article>
+        </>
+    )
+}
+
+export default ProductCard;
