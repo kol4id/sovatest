@@ -22,6 +22,7 @@ const ProductCard: FC<ProductCardProps> = ({product}) => {
                 />
                 <h2>{product.name}</h2>
                 <p>{`цена: ${product.price} ₽`}</p>
+                <p>{`ID: ${product.id}`}</p>
             </article>
         </>
     )
