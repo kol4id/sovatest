@@ -1,6 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import App from "../App";
 import Home from "../pages/Home";
+import Product from "../pages/Product";
 
 export const routes = createBrowserRouter([
     {
@@ -8,7 +9,8 @@ export const routes = createBrowserRouter([
         element: <App/>,
         children: [
             {index: true, element: <Navigate to="products" replace />},
-            {path: 'products/:page?', element: <Home /> },
+            {path: 'products/:page?', element: <Home/> },
+            {path: 'product/:id?', element: <Product/> },
         ]
     }
 ])
