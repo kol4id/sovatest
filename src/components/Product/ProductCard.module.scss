@@ -1,0 +1,52 @@
+@use "../../styles/_variables.scss" as *;
+
+.card_article{
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    max-height: 300px;
+    min-height: min-content;
+    width: 100%;
+    padding: 4px;
+    border-radius: 10px;
+
+    &:hover {
+        background-color: $item-card-hover-bg-color;
+        cursor: pointer;
+    }
+
+    img {
+        border-radius: 10px;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        min-height: 100px;
+        min-width: 100px;
+    }
+
+    h2 {
+        font-size: 14pt;
+        overflow: hidden;
+        max-height: 25px;
+        padding: 0;
+        margin: 5px 0;
+    }
+
+    p {
+        font-size: 12pt;
+        overflow: hidden;
+        max-height: 25px;
+        padding: 0;
+        margin: 5px 0;
+    }
+
+    @media (max-width: 1024px) {
+        max-width: 300px;
+        max-height: 400px;
+        min-width: 100px;
+    }
+
+    @media (max-width: 480px) {
+        max-width: 200px;
+        max-height: 300px;
+    }
+}

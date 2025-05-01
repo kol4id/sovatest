@@ -1,0 +1,15 @@
+
+.pagination_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.page_button {
+    cursor: pointer;
+    font-size: 14pt;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+}
