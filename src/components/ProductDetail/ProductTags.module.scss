@@ -1,0 +1,19 @@
+.tags_container {
+    margin: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: baseline;
+
+    @media (max-width: 480px) {
+        margin: 15px 10px;
+        gap: 5px;
+    }
+
+    &_item{
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 16pt;
+        cursor: pointer;
+    }
+}

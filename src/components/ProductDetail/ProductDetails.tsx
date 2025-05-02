@@ -2,8 +2,11 @@ import { useSelector } from "react-redux"
 import { useParams } from "react-router-dom"
 import { RootState } from "../../store/store"
 import EmptyProduct from "./EmptyProduct"
-import ImageList from "./ImageList"
 import LoadingSpinner from "../Spinner/LoadingSpiner"
+import ProductTags from "./ProductTags"
+import ImageSection from "./ImageSection"
+import styles from "./ProductDetails.module.scss"
+import ProductInfo from "./ProductInfo"
 
 
 const ProductDetails = () => {
@@ -16,8 +19,15 @@ const ProductDetails = () => {
 
     return (
         <>
-
-            <ImageList images={product.images}/>
+            <article className={styles.product_section}>
+                <section className={styles.product_section_container}>
+                    <ProductTags tags={product.tags}/>
+                    <main className={styles.product_section_details}>
+                        <ImageSection images={product.images}/>
+                        <ProductInfo product={product}/>
+                    </main>
+                </section>
+            </article>
         </>
     )
 }
