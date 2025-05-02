@@ -1,17 +1,19 @@
 import { FC } from "react";
 import styles from "./Pagination.module.scss";
 import { Link } from "react-router-dom";
+import { useAppDispatch } from "../../store/store";
+import { setCurrentPage } from "../../store/productSearchSlice";
 
 interface PaginationProps {
     totalPages: number;
     currentPage: number;
-    onPageChange: (page: number) => void;
 }
 
-const Pagination: FC<PaginationProps> = ({ totalPages, currentPage, onPageChange }) => {
+const Pagination: FC<PaginationProps> = ({ totalPages, currentPage}) => {
+    const dispatch = useAppDispatch();
 
     const handlePageChange = (pageModifier: number) => {
-        onPageChange(currentPage + pageModifier);
+        dispatch(setCurrentPage(currentPage + pageModifier));
     }
 
     if (totalPages <= 1) return null;
