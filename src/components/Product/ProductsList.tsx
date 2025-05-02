@@ -19,7 +19,7 @@ const ProductsList: FC<IProps> = ({page = 1}) => {
         <>
             <ul className={styles.product_container}>
                 {productsByPage.map((product) => (
-                    <li key={product.id}>
+                    <li key={product.id} className={styles.product_container_item}>
                         <ProductCard product={product}/>
                     </li>
                 ))}

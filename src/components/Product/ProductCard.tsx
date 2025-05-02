@@ -13,7 +13,7 @@ const ProductCard: FC<ProductCardProps> = ({product}) => {
 
     return(
         <>  
-            <Link to={`/product/${product.id}`} style={{ all: 'unset' }}>
+            <Link to={`/product/${product.id}`} style={{ textDecoration: 'none', color: 'inherit'}}>
                 <article className={styles.card_article}>
                     <img 
                         src={imgSrc}
