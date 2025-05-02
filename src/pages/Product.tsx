@@ -1,9 +1,10 @@
+import ProductDetails from "../components/ProductDetail/ProductDetails";
 
 
 const Product = () => {
     return (
         <>
-            <div>Я ПРОДУКТ</div>
+            <ProductDetails/>
         </>
     )
 }
