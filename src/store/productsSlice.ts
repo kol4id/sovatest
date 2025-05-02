@@ -10,7 +10,7 @@ export interface Product {
     ean: string;
     upc: string;
     image: string;
-    images: ImagesList[];
+    images: SubImage[];
     net_price: number;
     taxes: number;
     price: number;
@@ -18,7 +18,7 @@ export interface Product {
     tags: string[];
 }
 
-export interface ImagesList{
+export interface SubImage{
     title: string;
     description: string;
     url: string;

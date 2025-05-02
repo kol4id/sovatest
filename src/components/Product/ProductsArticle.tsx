@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../store/store";
 import { PAGE_LIMIT } from "../../config";
 import { useParams } from "react-router-dom";
+import LoadingSpinner from "../Spinner/LoadingSpiner";
 
 const ProductsArticle = () => {
     const currentPage = useParams().page ?? '1';
@@ -13,10 +14,13 @@ const ProductsArticle = () => {
     
     console.log(page);
     const productsLength = useSelector((state: RootState) => state.products.products.length);
+    const isLoading = useSelector((state: RootState) => state.products.isLoading);
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }, [page]);
+
+    if (isLoading) return <LoadingSpinner/>
 
     return (
         <>

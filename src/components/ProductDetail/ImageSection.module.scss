@@ -1,0 +1,42 @@
+.image_section {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 35px;
+    max-width: min-content;
+
+    @media (max-width: 480px) {
+        margin: 15px 15px;
+    }
+
+    &_images{
+        display: flex;
+        flex-direction: row;
+        width: 100%;  
+    }
+
+    &_main_img{
+        width: min(calc(60vw + 28px), 628px);
+        height: auto;
+        object-fit: fill;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    &_description {
+        margin-top: 10px;
+        font-size: 13pt;
+        word-break: break-all;
+    
+        h3{
+            font-size: 18pt;
+            margin: 0;
+            padding: 0;
+        }
+    
+        p{
+            margin: 5px 0px;
+            padding: 0;
+        }
+    }
+}

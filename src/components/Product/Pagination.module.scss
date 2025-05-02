@@ -8,8 +8,10 @@
 
 .page_button {
     cursor: pointer;
-    font-size: 14pt;
+    border-radius: 5px;
+    font-size: 18pt;
     text-align: center;
-    width: 100px;
-    height: 30px;
+    border: none;
+    width: 120px;
+    height: 40px;
 }

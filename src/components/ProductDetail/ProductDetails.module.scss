@@ -1,0 +1,22 @@
+.product_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    &_container{
+        width: 100%;
+        max-width: 1600px;
+    }
+
+    &_details{
+        display: flex;
+        flex-direction: row;
+        padding-right: 15px;
+    
+        @media (max-width: 1280px) {
+            flex-direction: column;
+        }
+    }
+}
