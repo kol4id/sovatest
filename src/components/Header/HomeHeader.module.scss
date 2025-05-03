@@ -1,0 +1,37 @@
+
+.header_home{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+
+    &_container{
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 1280px;
+        align-items: center;
+        border-bottom: 1px  solid #e9ecef;
+
+        @media (max-width: 480px) {
+            padding: 0px 10px;
+        }
+    }
+
+    &_search{
+        width: 400px;
+    }
+
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+    }
+}

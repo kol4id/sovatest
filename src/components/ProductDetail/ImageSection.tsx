@@ -22,6 +22,7 @@ const ImageSection: FC<ImageListProps> = ({images}) => {
                 <section className={styles.image_section_images}>
                     <ImageList images={images} onImageSelect={handleImageSelect}/>
                     <img 
+                        alt={`Image: ${selectedImage.title}`}
                         className={styles.image_section_main_img}
                         src={selectedImage.url}
                     />

@@ -1,16 +1,9 @@
 import { Outlet } from 'react-router-dom'
 import './App.css'
-import { useEffect } from 'react';
-import { useAppDispatch } from './store/store';
-import { fetchProducts } from './store/productsSlice';
+import useAppFetch from './hooks/useAppFetch'
 
 function App() {
-
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(fetchProducts(100)); 
-  }, [dispatch]);
+  useAppFetch();
   
   return (
     <>

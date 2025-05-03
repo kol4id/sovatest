@@ -16,7 +16,7 @@ const ImageList: FC<ImageListProps> = ({images, onImageSelect}) => {
                         className={styles.list_container_img}
                         key={index}
                         src={image.url} 
-                        alt={`Image ${index + 1}`}
+                        alt={`Image: ${image.title}`}
                         onClick={() => onImageSelect(index)} 
                     />
                 ))}

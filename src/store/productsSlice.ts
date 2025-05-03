@@ -26,12 +26,14 @@ export interface SubImage{
 
 export interface ProductsState {
     products: Product[];
+    filteredProducts: Product[];
     isLoading: boolean;
     error: string | null;
 }
 
 const initialState: ProductsState = {
     products: [],
+    filteredProducts: [],
     isLoading: false,
     error: null,
 };
@@ -52,6 +54,9 @@ const productsSlice = createSlice({
         setProducts: (state, action) => {
             state.products = action.payload;
         },
+        setFilteredProducts: (state, action) => {
+            state.filteredProducts = action.payload;
+        },
         setLoading: (state, action) => {
             state.isLoading = action.payload;
         },
@@ -68,6 +73,7 @@ const productsSlice = createSlice({
             .addCase(fetchProducts.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.products = action.payload;
+                state.filteredProducts = action.payload;
             })
             .addCase(fetchProducts.rejected, (state, action) => {
                 state.isLoading = false;
@@ -76,5 +82,5 @@ const productsSlice = createSlice({
     },
 })
 
-export const { setProducts, setLoading, setError } = productsSlice.actions;
+export const { setProducts, setFilteredProducts, setLoading, setError } = productsSlice.actions;
 export default productsSlice.reducer;

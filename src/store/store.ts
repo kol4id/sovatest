@@ -1,10 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { useDispatch } from "react-redux";
 import products from "./productsSlice";
+import productSearch from "./productSearchSlice";
 
 export const store = configureStore({
     reducer: {
-        products: products
+        products: products,
+        productSearch: productSearch
     },
 });
 
