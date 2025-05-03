@@ -20,7 +20,7 @@ interface PaginationProps {
 const Pagination: FC<PaginationProps> = ({ totalPages, currentPage}) => {
     const dispatch = useAppDispatch();
     const navigate = useNavigate();
-
+    
     const handlePageChange = (pageModifier: number) => {
         dispatch(setCurrentPage(currentPage + pageModifier));
         navigate(`/products/${currentPage + pageModifier}`);

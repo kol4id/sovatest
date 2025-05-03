@@ -10,10 +10,19 @@ import { useNavigate } from "react-router-dom"
 interface IProps{
     page?: number
 }
+
+/**
+ * компонент, отображающий постарничный список товаров
+ * @param page - номер страницы, по умолчанию 1 
+ */
 const ProductsList: FC<IProps> = ({page = 1}) => {
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
     const filteredProducts = useFilterProducts();
+    /**
+     * Мемоизированный массив товаров, отфильтрованный и разбитый по текущей странице.
+     * Вычисляет подмассив `filteredProducts` на основе текущей страницы и лимита.
+     */
     const productsByPage = useMemo(() => filteredProducts.slice((page - 1) * PAGE_LIMIT, page * PAGE_LIMIT), [filteredProducts, page]);
    
     useEffect(()=>{

@@ -6,9 +6,15 @@ interface ProductInfoProps {
     product: Product
 }
 
+/**
+ * Отображает информацию о товаре в виде Ключ ... Значение.
+ * @param product - объект товара
+ */
 const ProductInfo: FC<ProductInfoProps> = ({product}) => {
     return (
         <>
+            {/* можно заменить на реализацию через Object.keys(obj).forEach
+                для более универсального отображения свойств объекта */}
             <article className={styles.product_info}>
                 <h2>Информация о товаре</h2>
                 <h1>{product.name}</h1>

@@ -14,6 +14,7 @@ const productSearchSlice = createSlice({
     name: "productSearch",
     initialState,
     reducers: {
+        // значение поиска товаров. Отвечает за фильтрацию товаров в ProductsList.tsx
         setProductSearchValue: (state, action: PayloadAction<string>) => {
             state.value = action.payload;
         },

@@ -6,6 +6,13 @@ interface ImageListProps {
     images: SubImage[];
     onImageSelect: (index: number) => void;
 }
+
+/**
+ * Отображает вертикальный список изображений. 
+ * При клике на изображение вызывается функция onImageSelect с индексом изображения.
+ * @param images - массив с объектами дополнительных изображений 
+ * @param onImageSelect - функция, которая вызывается при клике на изображение
+ */
 const ImageList: FC<ImageListProps> = ({images, onImageSelect}) => {
 
     return(

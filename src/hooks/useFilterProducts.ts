@@ -4,6 +4,12 @@ import { useEffect, useMemo } from "react"
 import { setFilteredProducts } from "../store/productsSlice"
 
 
+/**
+ * Фильтрует массив продуктов по имени, описанию и тегам.
+ * 
+ * @param isDispatch диспатчить ли отфильтрованные продукты в Redux. По умолчанию true.
+ * @returns Отфильтрованный массив продуктов
+ */
 const useFilterProducts = (isDispatch: boolean = true) => {
     const dispatch = useAppDispatch()
 
@@ -21,6 +27,7 @@ const useFilterProducts = (isDispatch: boolean = true) => {
         })
     },[searchValue, products])
 
+    // Диспатчим отфильтрованные продукты в Redux, если isDispatch true
     useEffect(() => {
         if (!isDispatch) return
         dispatch(setFilteredProducts(filtered));

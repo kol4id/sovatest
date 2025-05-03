@@ -1,6 +1,8 @@
 import styles from "./HomeHeader.module.scss";
 import ProductSearch from "./ProductSearch";
 
+// заголовок главной страницы с товарами
+// возможно, рефакторинг до глобального заголовка приложения
 const HomeHeader = () => {
     return (
         <>

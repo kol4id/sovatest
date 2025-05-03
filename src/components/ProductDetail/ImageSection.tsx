@@ -7,6 +7,11 @@ interface ImageListProps {
     images: SubImage[];
 }
 
+/**
+ * Отображает основное изображение и список дополнительных изображений.
+ * При клике на изображение из списка, оно становится основным.
+ * @param images - массив с объектами дополнительных изображений 
+ */
 const ImageSection: FC<ImageListProps> = ({images}) => {
     const [imageIndex, setImageIndex] = useState(0);
 
@@ -14,6 +19,7 @@ const ImageSection: FC<ImageListProps> = ({images}) => {
         setImageIndex(index);
     }, []);
 
+    // текущее главное изображение
     const selectedImage = images[imageIndex] || images[0];
 
     return (
@@ -27,6 +33,7 @@ const ImageSection: FC<ImageListProps> = ({images}) => {
                         src={selectedImage.url}
                     />
                 </section>
+                {/* у каждого дополнительного изображения есть название и описание*/}
                 <article className={styles.image_section_description}>
                     <h3>{`Название: ${selectedImage.title}`}</h3>
                     <p>{`Описание: ${selectedImage.description}`}</p>
