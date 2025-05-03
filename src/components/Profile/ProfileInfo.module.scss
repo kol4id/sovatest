@@ -3,13 +3,15 @@
 .profile_main{
     width: 100%;
     display: flex;
-    align-items: center;
+    // align-items: center;
     flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
 
     &_section{
         display: flex;
         width: 100%;
-        max-width: 1200px;
+        
 
         @media (max-width: 620px) {
             flex-direction: column;
