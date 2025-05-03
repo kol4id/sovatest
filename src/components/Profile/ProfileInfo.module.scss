@@ -1,0 +1,48 @@
+@use '../../styles/_variables' as *;
+
+.profile_main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    &_section{
+        display: flex;
+        width: 100%;
+        max-width: 1200px;
+
+        @media (max-width: 620px) {
+            flex-direction: column;
+        }
+    }
+
+    &_picture{
+        margin: 15px 10px 0px 15px;
+
+        img{
+            width: min(40vw, 400px);
+            height: auto;
+
+            @media (max-width: 620px) {
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+    }
+    
+    &_exit{
+        display: flex;
+        align-items: center;
+        height: 80px;
+
+        button{
+            font-size: 12pt;
+            cursor: pointer;
+            border: none;
+            background-color: $exit-button-bg-color;
+            margin: 0px 15px;
+            width: 150px;
+            height: 40px;
+        }
+    }
+}
