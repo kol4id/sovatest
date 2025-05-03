@@ -5,7 +5,8 @@ import styles from "./ProductSearch.module.scss";
 import { useDebounce } from "../../hooks/useDebounce";
 import { useState } from "react";
 
-
+// строка поиска товаров, обновляет глобальное состояние
+// с дебаунсом в 250мс
 const ProductSearch = () => {
     const dispatch = useAppDispatch();
     const searchValue = useSelector((state: RootState) => state.productSearch.value);

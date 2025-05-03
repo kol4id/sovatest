@@ -5,6 +5,10 @@ interface ProductTagsProps {
     tags: string[];
 }
 
+/**
+ * Отображает теги товара.
+ * @param tags - массив тегов
+ */
 const ProductTags: FC<ProductTagsProps> = ({tags}) => {
     return (
         <>
