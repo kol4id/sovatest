@@ -8,6 +8,7 @@ import { PAGE_LIMIT } from "../../config";
 import { useParams } from "react-router-dom";
 import LoadingSpinner from "../Spinner/LoadingSpiner";
 import { setCurrentPage } from "../../store/productSearchSlice";
+import ProductSearch from "./ProductSearch";
 
 // Компонент отвечает за отображение списка товаров и пагинации
 const ProductsArticle = () => {
@@ -35,6 +36,9 @@ const ProductsArticle = () => {
     return (
         <>
             <main className={styles.main_section}>
+                <div className={styles.main_section_search}>
+                    <ProductSearch/>
+                </div>
                 <ProductsList page={page}/>
                 <Pagination
                     totalPages={Math.ceil(productsLength / PAGE_LIMIT)}

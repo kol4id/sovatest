@@ -31,6 +31,7 @@ const ProductSearch = () => {
                 placeholder="Поиск товара"
                 value={inputValue}
                 onChange={e => handleSearchChange(e.target.value)}
+                aria-label="Поиск товара"
             />
         </>
     )
