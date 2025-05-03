@@ -30,6 +30,11 @@ const ProductsList: FC<IProps> = ({page = 1}) => {
         navigate(`/products/1`);
     },[filteredProducts, dispatch, navigate])
 
+    // возвращаем надпись если фильтрация ничего не нашла
+    if (!productsByPage.length) return (
+        <h2 className={styles.nothing_h2}>НИЧЕГО НЕ НАЙДЕНО</h2>
+    )
+
     return (
         <>
             <ul className={styles.product_container}>

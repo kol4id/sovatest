@@ -13,7 +13,7 @@ interface ProductInfoProps {
 const ProductInfo: FC<ProductInfoProps> = ({product}) => {
     return (
         <>
-            {/* можно заменить на реализацию через Object.keys(obj).forEach
+            {/* можно заменить на реализацию через Object.keys(obj).map
                 для более универсального отображения свойств объекта */}
             <article className={styles.product_info}>
                 <h2>Информация о товаре</h2>
