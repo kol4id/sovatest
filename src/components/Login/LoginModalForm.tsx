@@ -2,9 +2,12 @@ import { useAppDispatch } from '../../store/store';
 import { fetchUser, setUserAuthorised } from '../../store/userSlice';
 import styles from './LoginModal.module.scss'
 
+//Компонент для отображения в модальной форме при авторизации
 const LoginModalForm = () =>{
     const dispatch = useAppDispatch()
 
+    //при успешной авторизации, получаем пользователя
+    //устанавливаем флаг авторизации и обновляем состояние в redux
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) =>{
         e.preventDefault();
         await dispatch(fetchUser());
