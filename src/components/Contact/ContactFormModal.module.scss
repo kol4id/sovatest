@@ -1,0 +1,76 @@
+@use '../../styles/variables' as *;
+
+.contact_form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $bg-color-main;
+    padding: 10px 0px;
+
+    h1{
+        font-size: 16pt;
+        margin: 10px 5px;
+        padding: 0;
+    }
+
+    &_field{
+        padding: 5px 10px 0px 10px;
+        width: 100%;
+        display: flex;
+        gap: 5px;
+
+        &_textarea{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-right: auto;
+        }
+
+        label{
+            min-width: 100px;
+            max-width: 50px;
+        }
+    
+        input{
+            width: 170px;
+            flex: 1;
+            padding: 3px 10px;
+            border: none;
+            height: 30px;
+            border-radius: 5px;
+            outline: none;
+        }
+        
+        textarea{
+            margin-top: 5px;
+            width: 100%;
+            resize: none;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+    }
+
+    &_action{
+        padding: 0px 10px;
+        height: 40px;
+        display: flex;
+        margin-top: 5px;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        &_close{
+            background-color: $exit-button-bg-color;
+        }
+    }
+
+    button{
+        border: none;
+        font-size: 1rem;
+        height: 30px;
+        cursor: pointer;
+    }
+}

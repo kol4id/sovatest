@@ -3,6 +3,7 @@ import Modal from "../Modal";
 import styles from './LoginButton.module.scss'
 import LoginModalForm from "./LoginModalForm";
 
+// Компонент для вызова модальной формы
 const LoginButton = () =>{
     const [isOpen, setIsOpen] = useState(false);
 
@@ -13,6 +14,10 @@ const LoginButton = () =>{
             >
                 Войти в аккаунт
             </button>
+
+            {/* вызов происходит путем простой установки isOpen в true 
+                закрытие формы через установку isOpen в false
+            */}
             <Modal
                 isOpen={isOpen}
                 onClose={() => setIsOpen(false)}
