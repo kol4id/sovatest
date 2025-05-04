@@ -1,0 +1,24 @@
+@use '../../styles/variables' as *;
+
+.form_list{
+    border-radius: 10px;
+    padding: 10px 10px;
+    width: 300px;
+    background-color: $bg-color-main;
+
+    &_item{
+        display: flex;
+        width: 100%;
+    }
+
+    &_label{
+        color: $info-item-label-color;
+        white-space: nowrap;
+        width: 100px;
+    }
+
+    &_value {
+        width: 180px;
+        word-break: break-all;
+    }
+}

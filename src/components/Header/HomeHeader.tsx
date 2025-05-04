@@ -1,3 +1,4 @@
+import Contact from "../Contact/Contact";
 import Login from "../Login/Login";
 import styles from "./HomeHeader.module.scss";
 
@@ -10,7 +11,9 @@ const HomeHeader = () => {
             <header className={styles.header_home}>
                 <section className={styles.header_home_container}>
 
-
+                    <div>
+                        <Contact/>
+                    </div>
                     <div className={styles.header_home_login}>
                         <Login/>
                     </div>
