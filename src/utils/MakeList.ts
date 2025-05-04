@@ -14,9 +14,10 @@ interface KeyValueItem {
  * @param excludedKeys - сет с ключами для исключения 
  * @returns возвращает какждый параметр объекта как объект {key, value}
  */
-const MakeList = (obj: any, excludedKeys: Set<string>): KeyValueItem[] => {
+const MakeList = (obj: any, excludedKeys?: Set<string>): KeyValueItem[] => {
     return Object.entries(obj).flatMap(([key, value]) => {
-        if (excludedKeys.has(key)) return [];
+        if (excludedKeys?.has(key)) return [];
+        if (!value && value !== 0 && value !== false) return [];
         if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
             return MakeList(value, excludedKeys);
         }
